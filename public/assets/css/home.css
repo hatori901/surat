@@ -85,7 +85,7 @@ body {
     width: 85px;
     height: 85px;
     top: 12%;
-    left: 77%;
+    left: 67%;
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
     -webkit-perspective: 85px;
@@ -131,7 +131,7 @@ body {
 }
 
 .item h2 {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
     -webkit-transition: .3s all ease;
@@ -301,6 +301,31 @@ body {
     color: rgb(59, 55, 55);
     margin-left: 15px;
     margin-right: 15px;
+}
+.footer {
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-color: white;
+    -webkit-box-shadow: 0px -1px 0px 0px #efefef;
+    box-shadow: 0px -1px 0px 0px #efefef;
+}
+.footer-bottom {
+    background-color: #fff9ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 44px;
+    padding-bottom: 44px;
 }
 @-webkit-keyframes featureImgBounce {
     0% {

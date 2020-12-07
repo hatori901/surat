@@ -1,7 +1,7 @@
-<header id="nav">
+<header id="nav" class="fixed-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg navigation p-3">
-            <h3 class="align-self-center text-center mr-md-4">Surat</h3>
+            <div class="align-self-center"><img src="assets/images/logo.png" width="100" alt=""></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>

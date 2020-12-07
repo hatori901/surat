@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <img src="assets/images/logo.png" class="block h-9 w-auto" alt="">
                     </a>
                 </div>
 
@@ -18,12 +18,23 @@
                     <x-jet-nav-link href="{{ route('surat') }}" :active="request()->routeIs('surat')">
                         {{ __('Daftar Surat') }}
                     </x-jet-nav-link>
+                    @if (auth()->user()->is_admin == 1)
+                        <x-jet-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
+                            {{ __('Daftar User') }}
+                        </x-jet-nav-link>
+                        <x-jet-nav-link href="{{ route('daftar_artikel') }}" :active="request()->routeIs('daftar_artikel')">
+                            {{ __('Artikel') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
                 
             </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                @if (auth()->user()->is_admin == 1)
+                    <p class="mr-4">Anda Login Sebagai Admin</p>
+                @endif
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())

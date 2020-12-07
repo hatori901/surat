@@ -32,44 +32,43 @@
         <div class="container mx-auto">
             <h2 class="font-weight-bold text-center mb-5">Fitur Fitur</h2>
             <div class="row mx-auto">
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
                         <img src="assets/images/animate.svg" class="img-fluid" alt="...">
                         <h4>Pengiriman Cepat</h4>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, praesentium.
+                            Pengiriman Sangat Cepat 
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
                         <img src="assets/images/animate.svg" class="img-fluid" alt="...">
-                        <h4>Pengiriman Cepat</h4>
+                        <h4>Mudah Digunakan</h4>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, praesentium.
+                            Mudah Digunakan
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
                         <img src="assets/images/animate.svg" class="img-fluid" alt="...">
-                        <h4>Pengiriman Cepat</h4>
+                        <h4>Mobile Friendly</h4>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, praesentium.
+                            Mobile Friendly
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section class="info">
+    <section class="info mt-5">
         <img src="assets/images/background/info-bg.png" class="info__bg" alt="Awesome Image" />
         <div class="container">
             <lottie-player src="assets/images/ilustration/animate/Animation06/drawkit-grape-animation-6-LOOP.json" background="transparent" class="info__moc" speed="1"  style="width: 500px;" loop autoplay></lottie-player>
             <div class="row justify-content-lg-end">
                 <div class="col-lg-6">
                     <div class="info__content">
-                        <i class="info__icon dimon-icon-data1"></i>
                         <div class="block-title text-left">
                             <h2 class="block-title__title">Buat Surat Izin Hanya Sekejap Mata</h2>
                         </div>
@@ -81,11 +80,14 @@
                             <li><i class="fa fa-check"></i> Membantu siswa yang tidak sempat membuat surat</li>
                             <li><i class="fa fa-check"></i> Efisien dalam pengiriman surat</li>
                         </ul>
-                        <a href="#" class="btn btn-lg btn-outline-primary"><span>Get Started</span></a>
+                        <a href="{{ route('login') }}" class="btn btn-lg btn-outline-primary"><span>Buat Surat</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <footer class="site-footer">
+
+    </footer>
 @endsection
 

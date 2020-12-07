@@ -9,10 +9,15 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
+        <link type="text/css" href="assets/jquery/css/jquery-ui.css" rel="stylesheet"> 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+        <script src="assets/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/jquery/js/jquery.signature.js"></script>
+        <script>
+            $('#ttd').signature();
+        </script>
         @livewireStyles
 
         <!-- Scripts -->

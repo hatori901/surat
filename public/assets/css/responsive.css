@@ -31,4 +31,7 @@
     .banner__moc:before {
         display: none;
     }
+    .info__moc {
+        z-index: -1;
+    }
 }
