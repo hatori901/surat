@@ -21,6 +21,55 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Tutorial Installation
+Pertama
+
+```bash
+git clone https://github.com/hatori901/surat.git
+```
+
+Kedua, Install librari-librari atau dependencies yang digunakan Laravel
+```bash
+composer install
+```
+
+Ketiga, Buat file .env
+```bash
+copy .env.example .env
+```
+Edit konfigurasi pada file .env
+
+Keempat,Generate key
+```bash
+php artisan key:generate
+```
+
+Kelima,
+```bash
+php artisan migrate
+```
+
+Keenam,
+```bash
+php artisan db:seed --class=UserSeeder
+```
+
+Ketujuh,
+```bash
+php artisan db:seed --class=PostsSeeder
+```
+
+Kedelapan,
+```bash
+npm install && npm run dev
+```
+
+Kesembilan,
+```bash
+php artisan serve
+```
+
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
