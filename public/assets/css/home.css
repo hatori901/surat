@@ -247,6 +247,26 @@ body {
 .info .thm-btn {
     padding: 18px 55.5px;
 }
+.posts{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.post{
+    padding: 20px;
+    min-height: 250px;
+}
+.post a{
+    color: #363232;
+}
+.post a:hover{
+    color: #363232;
+}
+.inner__content{
+    padding: 50px;
+    background-color: #ddd;
+    box-shadow: #dddce2;
+    border-radius: 10px;
+}
 .inner-banner {
     position: relative;
     background-color: #fff;
@@ -266,6 +286,10 @@ body {
     color: rgb(46, 43, 43);
     margin: 0;
     margin-top: 10px;
+}
+.about__text span{
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .thm-breadcrumb {

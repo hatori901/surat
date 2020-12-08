@@ -77,29 +77,25 @@
                         @foreach ($surats as $surat)
                             <tr>
                                 <td class="border px-4 py-2 text-center">{{ $surat->id }}</td>
-                                <td class="border px-4 py-2 text-center">{{ $surat->name }}</td>
-                                <td class="border px-4 py-2 text-center">{{ $surat->alasan }}</td>
+                                <td class="border px-4 py-2 text-center break-words">{{ $surat->name }}</td>
+                                <td class="border px-4 py-2 text-center break-words">{{ $surat->alasan }}</td>
                                 <td class="border px-4 py-2 text-center">{{ $surat->tgl }}</td>
                                 <td class="border px-4 py-2 text-center"><span class="p-1 {{ $surat->status == 'Pending' ? 'bg-yellow-400' : ($surat->status == 'Disetujui' ? 'bg-green-400' : 'bg-red-400') }} text-white rounded-md">{{ $surat->status }}</span></td>
                                 @if (auth()->user()->is_admin == 1)
                                     <td class="border px-4 py-2">
-                                        <div class="flex flex-1">
-                                            <button class="modal-open{{ $surat->id }} bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Lihat</button>
+                                        <div class="flex flex-1 sm:flex-0">
+                                            <button class="modal-open{{ $surat->id }} bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-eye"></i></button>
                                             <div class="modal{{ $surat->id }} opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
                                                 <div class="modal-overlay{{ $surat->id }} absolute w-full h-full bg-gray-900 opacity-50"></div>
                                                 <div class="modal-container{{ $surat->id }} bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
                                                     <div class="modal-close{{ $surat->id }} absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
-                                                        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                                                        </svg>
+                                                        x
                                                     </div>
                                                     <div class="modal-content{{ $surat->id }} py-4 text-left px-6">
                                                         <div class="flex justify-between items-center pb-3">
                                                             <p class="text-2xl font-bold">Surat Izin Milik {{ $surat->name }}</p>
                                                             <div class="modal-close{{ $surat->id }} cursor-pointer z-50">
-                                                                <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                                                                </svg>
+                                                                close
                                                             </div>
                                                         </div>
                                                         <div class="mt-6">
@@ -174,7 +170,7 @@
                                             <form action="{{ route('delete',$surat->id) }}" method="post">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+                                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-trash"></i></button>
                                             </form>
                                         </div>
                                         

@@ -21,41 +21,43 @@
                     </div>
                 </div>
                 <div class="img-header d-none d-md-flex col-md-6">
-                    {{-- <img class="animate__animated animate__bounce animate__slow animate__infinite "
-                        src="assets/images/animate.svg" width="100%" alt=""> --}}
-                        <lottie-player src="assets/images/ilustration/animate/Animation03/drawkit-grape-animation-3-LOOP.json" background="transparent"  speed="1"  style="width: 500px;" loop autoplay></lottie-player>
+                    <lottie-player src="assets/images/ilustration/animate/Animation03/drawkit-grape-animation-3-LOOP.json" background="transparent"  speed="1"  style="width: 500px;" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
     </div>
     <div class="section-fitur mt-5">
         <div class="container mx-auto">
-            <h2 class="font-weight-bold text-center mb-5">Fitur Fitur</h2>
+            <h2 class="font-weight-bold text-center mb-5">Layanan Surat Online</h2>
             <div class="row mx-auto">
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
-                        <img src="assets/images/animate.svg" class="img-fluid" alt="...">
-                        <h4>Pengiriman Cepat</h4>
+                        <span class="d-block mb-3 text-primary d-flex justify-content-center">
+                            <lottie-player src="assets/images/ilustration/animate/Animation07/drawkit-grape-animation-7-LOOP.json" background="transparent"  speed="1"  style="width: 200px;" loop autoplay></lottie-player>
+                        </span>
+                        <h2>Buat Surat Sendiri</h2>
                         <p>
-                            Pengiriman Sangat Cepat 
+                            Siswa bisa membuat surat izin sendiri melalui gadget  
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
-                        <img src="assets/images/animate.svg" class="img-fluid" alt="...">
-                        <h4>Mudah Digunakan</h4>
-                        <p>
-                            Mudah Digunakan
-                        </p>
+                        <span class="d-block mb-3 text-primary d-flex justify-content-center">
+                            <lottie-player src="assets/images/ilustration/animate/Animation02/drawkit-grape-animation-2-LOOP.json" background="transparent"  speed="1"  style="width: 200px;" loop autoplay></lottie-player>
+                        </span>
+                        <h2>Tanpa Perlu Datang Ke Sekolah</h2>
+                        <p>Siswa tidak perlud datang ke sekolah</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
                     <div class="fitur item shadow">
-                        <img src="assets/images/animate.svg" class="img-fluid" alt="...">
-                        <h4>Mobile Friendly</h4>
+                        <span class="d-block mb-3 text-primary d-flex justify-content-center">
+                            <lottie-player src="assets/images/ilustration/animate/Animation08/drawkit-grape-animation-8-LOOP.json" background="transparent"  speed="1"  style="width: 200px;" loop autoplay></lottie-player>
+                        </span>
+                        <h2>Efisien Waktu Dan Biaya</h2>
                         <p>
-                            Mobile Friendly
+                            Membuat surat online tanpa dikenakan biaya
                         </p>
                     </div>
                 </div>

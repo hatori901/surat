@@ -135,6 +135,17 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('surat') }}" :active="request()->routeIs('surat')">
+                {{ __('Daftar Surat') }}
+            </x-jet-responsive-nav-link>
+            @if (auth()->user()->is_admin == 1)
+                <x-jet-responsive-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
+                    {{ __('Daftar User') }}
+                </x-jet-responsive-nav-link>
+                <x-jet-responsive-nav-link href="{{ route('daftar_artikel') }}" :active="request()->routeIs('daftar_artikel')">
+                    {{ __('Artikel') }}
+                </x-jet-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

@@ -80,22 +80,18 @@
                                                                 </svg>
                                                             </div>
                                                         </div>
-                                                        <div class="mt-6">
+                                                        <form class="mt-6" action="{{ route('upd',$post->id) }}" method="post">
+                                                            @csrf
+                                                            @method('PATCH')
                                                             <label for="title" class="block mt-2 text-xs font-semibold text-gray-600">Judul</label>
-                                                            <input id="title" type="text" name="title" value="{{ $post->title }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly />
+                                                            <input id="title" type="text" name="title" value="{{ $post->title }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" />
                                                             <label for="alasan" class="block mt-2 text-xs font-semibold text-gray-600">Alasan</label>
-                                                            <textarea id="content" name="content" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" rows="10" readonly>{{ $post->content }}</textarea>
+                                                            <textarea id="content" name="content" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" rows="10">{{ $post->content }}</textarea>
                                                             <div class="flex justify-end pt-2">
-                                                            <button class="modal-close{{ $post->id }} px-4 text-indigo-500 p-3 rounded-lg text-white hover:text-indigo-400">Close</button>
-                                                            <form action="{{ route('update',$post->id) }}" method="post">
-                                                                @csrf
-                                                                @method('PATCH')
-                                                                <input type="hidden" name="status" value="Disetujui">
+                                                                <button class="modal-close{{ $post->id }} px-4 text-indigo-500 p-3 rounded-lg text-white hover:text-indigo-400">Close</button>
                                                                 <button class="px-4 bg-blue-500 p-3 rounded-lg text-white hover:bg-blue-400">Perbarui</button>
-                                                            </form>
-                                                            
                                                             </div>
-                                                        </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>

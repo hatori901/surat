@@ -30,8 +30,8 @@
                         @foreach ($users as $user)
                             <tr>
                                 <td class="border px-4 py-2 text-center">{{ $user->id }}</td>
-                                <td class="border px-4 py-2 text-center">{{ $user->name }}</td>
-                                <td class="border px-4 py-2 text-center">{{ $user->email }}</td>
+                                <td class="border px-4 py-2 text-center break-words">{{ $user->name }}</td>
+                                <td class="border px-4 py-2 text-center break-words">{{ $user->email }}</td>
                                 <td class="border px-4 py-2 text-center">{{ $user->is_admin == 1 ? 'Admin' : 'Siswa' }}</td>
                             </tr>
                         @endforeach

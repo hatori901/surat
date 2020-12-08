@@ -13,16 +13,17 @@
             <h2 class="inner-banner__title">Artikel</h2>
         </div>
     </div>
-    <div class="post my-5">
+    <div class="posts my-5">
         <div class="container">
             <div class="row mx-auto">
                 @foreach ($posts as $post)
                     <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
-                        <div class="fitur item shadow text-truncate">
-                            <h2>{{ $post->title }}</h2>
-                            {{-- <p>
-                                {{ $post->content }}
-                            </p> --}}
+                        <div class="post shadow">
+                            <h2>{{ $post->title }}</a></h2>
+                            <p>
+                                {{ Str::words($post->content,20) }}
+                            </p>
+                            <a href="artikel/post/{{ $post->id }}">Lanjutkan Membaca <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 @endforeach

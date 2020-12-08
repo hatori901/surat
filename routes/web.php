@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/artikel', [HomeController::class, 'artikel']);
+Route::get('/artikel/post/{id}', [PostsController::class, 'show']);
 Route::get('/profile', [HomeController::class, 'profile']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
@@ -29,5 +30,6 @@ Route::post('/add',[SuratController::class,'store'])->name('add');
 Route::patch('/update/{id}',[SuratController::class,'update'])->name('update');
 Route::delete('/delete/{id}',[SuratController::class,'destroy'])->name('delete');
 Route::post('/newartikel',[PostsController::class,'store'])->name('new');
+Route::patch('/updateartikel/{id}',[PostsController::class,'update'])->name('upd');
 Route::delete('/deleteartikel/{id}',[PostsController::class,'destroy'])->name('del');
 Route::get('admin/dashboard', [DashboardController::class, 'admin'])->name('admin.home')->middleware('is_admin');

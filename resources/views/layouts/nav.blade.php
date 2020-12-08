@@ -20,12 +20,19 @@
                     <li class="nav-item">
                         <a href="/about">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/register">Register</a>
-                    </li>
+                    @if (auth()->user() != NULL)
+                        <li class="nav-item">
+                            <a href="/dashboard">Dashboard</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register">Register</a>
+                        </li>
+                    @endif
+
                 </ul>
             </div>
         </nav>

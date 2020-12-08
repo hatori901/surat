@@ -4,20 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        
         <title>@yield('title') - Surat Online Web Application</title>
 
         <!-- Fonts -->
+        <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-        <link type="text/css" href="assets/jquery/css/jquery-ui.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome/css/all.css') }}">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <script src="assets/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/jquery/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="assets/jquery/js/jquery.signature.js"></script>
-        <script>
-            $('#ttd').signature();
-        </script>
+        <script src="{{ asset('assets/fonts/fontawesome/js/all.js') }}"></script>
         @livewireStyles
 
         <!-- Scripts -->
