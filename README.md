@@ -35,7 +35,7 @@ composer install
 
 Ketiga, Buat file .env
 ```bash
-copy .env.example .env
+cp .env.example .env
 ```
 Edit konfigurasi pada file .env
 
