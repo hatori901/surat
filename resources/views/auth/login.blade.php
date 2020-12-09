@@ -32,7 +32,6 @@
                     <span class="ml-2 text-sm text-blue-600">{{ __('Ingat Saya') }}</span>
                 </label>
             </div>
-
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-blue-600 hover:text-gray-900" href="{{ route('password.request') }}">
@@ -45,5 +44,6 @@
                 </x-jet-button>
             </div>
         </form>
+        <p><a href="/"><i class="fas fa-arrow-left"></i> Kembali</a></p>
     </x-jet-authentication-card>
 </x-guest-layout>

@@ -1,4 +1,4 @@
-@section('title','Users')
+@section('title','Artikel')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -88,8 +88,8 @@
                                                             <label for="alasan" class="block mt-2 text-xs font-semibold text-gray-600">Alasan</label>
                                                             <textarea id="content" name="content" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" rows="10">{{ $post->content }}</textarea>
                                                             <div class="flex justify-end pt-2">
-                                                                <button class="modal-close{{ $post->id }} px-4 text-indigo-500 p-3 rounded-lg text-white hover:text-indigo-400">Close</button>
-                                                                <button class="px-4 bg-blue-500 p-3 rounded-lg text-white hover:bg-blue-400">Perbarui</button>
+                                                                <div class="modal-close{{ $post->id }} px-4 cursor-pointer text-indigo-500 p-3 rounded-lg text-white hover:text-indigo-400">Close</div>
+                                                                <button type="submit" class="px-4 bg-blue-500 p-3 rounded-lg text-white hover:bg-blue-400">Perbarui</button>
                                                             </div>
                                                         </form>
                                                     </div>

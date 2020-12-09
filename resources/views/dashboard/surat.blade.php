@@ -1,4 +1,4 @@
-@section('title','Dashboard')
+@section('title','Daftar Surat')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -100,17 +100,22 @@
                                                         </div>
                                                         <div class="mt-6">
                                                             <label for="name" class="block mt-2 text-xs font-semibold text-gray-600">Nama Lengkap</label>
-                                                            <input id="name" type="text" name="name" value="{{ auth()->user()->name }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly />
+                                                            <input id="name" type="text" name="name" value="{{ $surat->name }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly />
                                                             <label for="name" class="block mt-2 text-xs font-semibold text-gray-600">Kategori</label>
                                                             <input type="text" value="{{ $surat->kategori }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly>
                                                             <label for="alasan" class="block mt-2 text-xs font-semibold text-gray-600">Alasan</label>
                                                             <textarea id="alasan" name="alasan" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly>{{ $surat->alasan }}</textarea>
                                                             <label for="tgl" class="block mt-2 text-xs font-semibold text-gray-600">Tanggal</label>
                                                             <input id="tgl" type="date" value="{{ $surat->tgl }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly/>
-                                                            <label for="tgl" class="block mt-2 text-xs font-semibold text-gray-600">Nama Orang Tua Wali</label>
+                                                            <label for="nama_ortu" class="block mt-2 text-xs font-semibold text-gray-600">Nama Orang Tua Wali</label>
                                                             <input id="nama_ortu" type="text" name="nama_ortu" value="{{ $surat->nama_ortu }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-100 appearance-none focus:outline-none focus:bg-gray-200 focus:shadow-inner" readonly />
+                                                            @if ($surat->status == 'Disetujui' || $surat->status == 'Ditolak')
+                                                                <label for="status" class="block mt-2 text-xs font-semibold text-gray-600">Status</label>
+                                                                <input id="status" type="text" name="status" value="{{ $surat->status }}" class="block w-full p-3 mt-2 text-gray-700 bg-{{ $surat->status == 'Disetujui' ? 'green' : 'red' }}-100 appearance-none focus:outline-none focus:bg-{{ $surat->status == 'Disetujui' ? 'green' : 'red' }}-200 focus:shadow-inner" readonly />
+                                                            @endif
                                                             <div class="flex justify-end pt-2">
-                                                            <form action="{{ route('update',$surat->id) }}" method="post">
+                                                            @if ($surat->status == 'Pending')
+                                                                <form action="{{ route('update',$surat->id) }}" method="post">
                                                                 @csrf
                                                                 @method('PATCH')
                                                                 <input type="hidden" name="status" value="Ditolak">
@@ -122,7 +127,7 @@
                                                                 <input type="hidden" name="status" value="Disetujui">
                                                                 <button class="px-4 bg-green-500 p-3 rounded-lg text-white hover:bg-green-400">Setuju</button>
                                                             </form>
-                                                            
+                                                            @endif
                                                             </div>
                                                         </div>
                                                     </div>

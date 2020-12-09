@@ -1,7 +1,8 @@
 <header id="nav" class="fixed-top">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navigation p-3">
+        <nav class="navbar navbar-expand-lg navigation p-2">
             <div class="align-self-center"><img src="assets/images/logo.png" width="100" alt=""></div>
+            <img src="assets/images/logohmti/logohmti.png" width="100" alt="">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>

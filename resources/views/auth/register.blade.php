@@ -39,5 +39,6 @@
                 </x-jet-button>
             </div>
         </form>
+        <p><a href="/"><i class="fas fa-arrow-left"></i> Kembali</a></p>
     </x-jet-authentication-card>
 </x-guest-layout>
